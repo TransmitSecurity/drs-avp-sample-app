@@ -1,39 +1,36 @@
-const AWS = require('aws-verified-permissions');
+import AWS from 'aws-sdk';
 import { Config } from '@utils';
 
 const client = new AWS.VerifiedPermissions({ region: Config.region });
 
-export type Entity = {
-  EntityType: string;
-  EntityId: string;
-};
-
-type Action = {
-  ActionType: string;
-  ActionId: string;
-};
-
 export async function isAuthorized(
-  principal: Entity,
-  resource: Entity,
-  action: Action,
+  principal: AWS.VerifiedPermissions.EntityIdentifier,
+  resource: AWS.VerifiedPermissions.EntityIdentifier,
+  action: AWS.VerifiedPermissions.ActionIdentifier,
   riskScore: number,
+  entities: AWS.VerifiedPermissions.EntitiesDefinition,
 ) {
   try {
-    const result = await client
-      .isAuthorized({
-        PolicyStoreIdentifier: Config.policyStoreId,
-        Principal: principal,
-        Resource: resource,
-        Action: action,
-        Context: {
-          riskScore: { Long: riskScore },
+    console.log('Authorization entites: ', JSON.stringify(entities));
+    let isAuthorizedInput: AWS.VerifiedPermissions.IsAuthorizedInput = {
+      policyStoreId: Config.policyStoreId,
+      principal: principal,
+      resource: resource,
+      action: action,
+      context: {
+        contextMap: {
+          riskScore: { long: riskScore },
         },
-      })
+      },
+      entities,
+    };
+    const result: AWS.VerifiedPermissions.IsAuthorizedOutput = await client
+      .isAuthorized(isAuthorizedInput)
       .promise();
-
-    return result.Decision == 'Allow';
+    console.log('authorized', result);
+    return result.decision.toLowerCase() == 'allow';
   } catch (err) {
     console.log('Failed handling isAuthorized using AVP, err: ' + err);
+    console.log(JSON.stringify(err));
   }
 }
