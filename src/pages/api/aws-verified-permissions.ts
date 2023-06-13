@@ -1,4 +1,4 @@
-const AWS = require('aws-sdk');
+import AWS from 'aws-sdk';
 import { Config } from '@utils';
 
 const client = new AWS.VerifiedPermissions({ region: Config.region });

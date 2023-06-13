@@ -3,7 +3,7 @@ import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { isAuthorized } from './aws-verified-permissions';
 import { RecommendationResult } from './recommendation.types';
-const AWS = require('aws-sdk');
+import AWS from 'aws-sdk';
 
 function parseActionToken(actionToken: unknown) {
   if (typeof actionToken == 'string') {
