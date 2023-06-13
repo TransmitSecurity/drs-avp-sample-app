@@ -443,9 +443,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-sdk@*:
-  version "2.1396.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1396.0.tgz#14dc92f874aca039a329d5a96f9f894fd9159252"
-  integrity sha512-5tAzB4pO9mfwb4XbDIv7wj4IsxaLI+KEAUZ8CR80sh2OdsP9AVGtMGH61dH6DQbHxCiwtLyQuoy7gZEuXv2ldQ==
+  version "2.1397.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1397.0.tgz#fdecbc04dcd8f33c2868e1b0691ce93a506704f5"
+  integrity sha512-Km+jUscV6vW3vuurSsGrTjEqaNfrE9ykA3IJmJb85V2z5tklJvoBU+7JcCiF6h3BDKegNjiFOM7uoL3cGVGz4g==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -750,9 +750,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.428:
-  version "1.4.428"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.428.tgz#c31fc88e854f49d8305cdabf6ec934ff1588a902"
-  integrity sha512-L7uUknyY286of0AYC8CKfgWstD0Smk2DvHDi9F0GWQhSH90Bzi7iDrmCbZKz75tYJxeGSAc7TYeKpmbjMDoh1w==
+  version "1.4.429"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.429.tgz#055a2543ba8b1a847bebf521791715ec30f8d97b"
+  integrity sha512-COua8RvN548KwPFzKMrTjFbmDsQRgdi0zSAhmo70TwC1tfLOSqq8p09n+GkdF5buvzE/NEYn1dP3itbfhun9gg==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
@@ -760,9 +760,9 @@ emoji-regex@^9.2.2:
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
 enhanced-resolve@^5.12.0:
-  version "5.14.1"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.14.1.tgz#de684b6803724477a4af5d74ccae5de52c25f6b3"
-  integrity sha512-Vklwq2vDKtl0y/vtwjSesgJ5MYS7Etuk5txS8VdKL4AOS1aUlD96zqIfsOSLQsdv3xgMRbtkWM8eG9XDfKUPow==
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.15.0.tgz#1af946c7d93603eb88e9896cee4904dc012e9c35"
+  integrity sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==
   dependencies:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"

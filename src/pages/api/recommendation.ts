@@ -58,8 +58,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const resource = {
           // default resource example
 
-          EntityType: 'Account',
-          EntityId: `account-${userId}`,
+          entityType: 'Account',
+          entityId: `account-${userId}`,
         };
 
         if (userId) {
